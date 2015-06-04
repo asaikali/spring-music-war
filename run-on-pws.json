@@ -1,0 +1,18 @@
+{
+    "services": [
+        {
+            "service": {
+                "name": "elephantsql",
+                "plan": "turtle",
+                "instance": "spring-music"
+            }
+        },
+        {
+            "service": {
+                "name": "newrelic",
+                "plan": "standard",
+                "instance": "spring-music"
+            }
+        }
+    ]
+}
