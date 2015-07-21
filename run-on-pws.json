@@ -48,8 +48,7 @@
                 "disk_in_mb": 1024,
                 "map_routes": [
                     "random1",
-                    "random2",
-                    "run-on-pws"
+                    "random2"
                 ],
                 "bind_services": [
                     "database",
