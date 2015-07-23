@@ -28,16 +28,16 @@
         "routes": [
             {
                 "name": "random1",
-                "value": "${random}"
+                "value": "${random-word}"
             },
             {
                 "name": "random2",
-                "value": "${random}"
+                "value": "${random-word}"
             },
             {
                 "name": "run-on-pws",
                 "value": "run-on-pws"
-            },
+            }
         ],
         "apps": [
             {
