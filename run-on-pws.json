@@ -28,11 +28,11 @@
         "routes": [
             {
                 "name": "random1",
-                "value": "${random-word}"
+                "value": "${random}"
             },
             {
                 "name": "random2",
-                "value": "${random-word}"
+                "value": "${random}"
             }
         ],
         "apps": [
