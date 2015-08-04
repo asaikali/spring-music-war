@@ -1,77 +1,75 @@
 {
-space: {
-name: "spring-music",
-services: {
-marketplace: [
-{
-provider_name: "elephantsql",
-plan: "turtle",
-instance_name: "database"
-},
-{
-provider_name: "newrelic",
-plan: "standard",
-instance_name: "monitoring-agent"
-}
-],
-user_provided: [
-{
-name: "my-custom-service",
-value: {
-username: "user",
-password: "pwd123",
-host: "example.com"
-}
-}
-]
-},
-routes: [
-{
-name: "random1",
-value: "${random}"
-},
-{
-name: "random2",
-value: "${random}"
-}
-],
-apps: [
-{
-name: "music",
-code: {
-url: "https://github.com/asaikali/spring-music-war/blob/master/spring-music.war?raw=true",
-content_type: "application/war",
-actions: [
-"push"
-]
-},
-instances: 1,
-memory_in_mb: 1024,
-disk_in_mb: 1024,
-map_routes: [
-"random1",
-"random2"
-],
-bind_services: [
-"database",
-"monitoring-agent",
-"my-custom-service"
-],
-env_variables: [
-{
-name: "env1",
-value: "value1"
-},
-{
-name: "env2",
-value: "value2"
-},
-{
-name: "env3",
-value: "value3"
-}
-]
-}
-]
-}
+    "space": {
+        "name": "spring-music",
+        "services": {
+            "marketplace": [
+                {
+                    "provider_name": "elephantsql",
+                    "plan": "turtle",
+                    "instance_name": "database"
+                },
+                {
+                    "provider_name": "newrelic",
+                    "plan": "standard",
+                    "instance_name": "monitoring-agent"
+                }
+            ],
+            "user_provided": [
+                {
+                    "name": "my-custom-service",
+                    "value": {
+                        "username": "user",
+                        "password": "pwd123",
+                        "host": "example.com"
+                    }
+                }
+            ]
+        },
+        "routes": [
+            {
+                "name": "random1",
+                "value": "${random}"
+            },
+            {
+                "name": "random2",
+                "value": "${random}"
+            }
+        ],
+        "apps": [
+            {
+                "name": "music",
+                "code": {
+                    "url": "https://github.com/asaikali/spring-music-war/blob/master/spring-music.war?raw=true",
+                    "content_type": "application/war",
+                    "actions": ["push"]
+                },
+                "instances": 1,
+                "memory_in_mb": 1024,
+                "disk_in_mb": 1024,
+                "map_routes": [
+                    "random1",
+                    "random2"
+                ],
+                "bind_services": [
+                    "database",
+                    "monitoring-agent",
+                    "my-custom-service"
+                ],
+                "env_variables": [
+                    {
+                        "name": "env1",
+                        "value": "value1"
+                    },
+                    {
+                        "name": "env2",
+                        "value": "value2"
+                    },
+                    {
+                        "name": "env3",
+                        "value": "value3"
+                    }
+                ]
+            }
+        ]
+    }
 }
