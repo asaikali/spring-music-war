@@ -1,5 +1,6 @@
 {
-    "name": "runoncf-push",
+    "orgName": "runoncf-push",
+    "orgUuid": "",
     "spaces": [
         {
             "name": "spring-music",
